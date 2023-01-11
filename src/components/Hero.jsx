@@ -2,32 +2,31 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className='md:h-[600px] h-[400px] relative mt-20 flex items-center justify-start'>
-      <div className='h-full w-full absolute -z-10 bg-gradient-to-r from-black'></div>
-      <div className='h-full w-full absolute -z-20'>
-        <img
-          className='w-full h-full object-cover'
-          src='https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-          alt=''
-        />
-      </div>
-      <div className='max-w-[1200px] w-full px-4 lg:px-0 mx-auto flex flex-col gap-8'>
-        <h4 className='font-bold text-white text-6xl md:text-8xl max-w-[600px]'>
+    <div className=' bg-white md:mt-20 grid md:grid-cols-2 gap-4 md:p-4 pt-10 max-w-[1200px] mx-auto'>
+      <div className='px-4 lg:px-0 mx-auto flex flex-col gap-8 justify-center'>
+        <h4 className='font-bold text-black text-4xl md:text-6xl'>
           La Casa del mejor Sabor y
-          <span className='text-yellow-400 font-bold border-b-4 border-gray-800'> Sazon</span>🔥
+          <span className='text-yellow-400 font-bold border-b-4 border-gray-800'> Sazon</span>
         </h4>
-        <p className='text-slate-300 max-w-[600px] '>
+        <p className='text-slate-600 max-w-[600px] '>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, obcaecati cupiditate.
           Possimus
         </p>
-        <div className='flex gap-8'>
-          <button className='px-8 text-lg py-4 bg-yellow-400 border border-yellow-400 rounded font-medium w-fit'>
+        <div className='flex gap-4 sm:gap-8 flex-col sm:flex-row justify-between md:justify-start'>
+          <button className=' w-full hover:scale-105 duration-200 px-4 md:px-8 text-lg py-4 bg-yellow-400 border border-yellow-400 rounded font-medium sm:w-fit'>
             Ordena Ahora
           </button>
-          <button className='px-8  text-lgpy-4 border-yellow-400 border-2 text-yellow-300 rounded font-medium w-fit'>
+          <button className='w-full hover:scale-105 duration-200 px-4 md:px-8 text-lg py-4 bg-yellow-400 border border-yellow-400 rounded font-medium sm:w-fit'>
             Reservar Mesa
           </button>
         </div>
+      </div>
+      <div className='flex relative items-center drop-shadow-xl justify-center  rounded-2xl overflow-hidden'>
+        <img
+          className='w-full h-full object-cover'
+          src='https://o.remove.bg/downloads/08f31728-f012-44e3-aca6-70a8c3a980d0/pexels-dima-valkov-3864682-removebg-preview.png'
+          alt=''
+        />
       </div>
     </div>
   );
