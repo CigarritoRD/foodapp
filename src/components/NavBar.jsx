@@ -3,7 +3,7 @@ import { RiSearchLine, RiShoppingBasketLine, RiUser3Line } from "react-icons/ri"
 import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
-    <nav className='  h-20 capitalize flex justify-between items-center max-w-[1200px] px-4'>
+    <nav className='  h-20 capitalize flex justify-between items-center max-w-[1200px] px-4 mx-auto'>
       <NavLink to={"home"}>
         <h1 className=' cursor-pointer text-2xl italic font-medium flex items-center justify-center'>
           Delicius <span className='font-bold text-3xl text-yellow-400'> FF</span>
