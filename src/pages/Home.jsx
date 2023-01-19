@@ -9,7 +9,7 @@ const Home = () => {
     <div className=''>
       <Hero />
       <CategoriasCarrusel />
-      <CarruselCards pre={"Mas"} titulo={"Populares"} />
+      <CarruselCards pre={"Mas "} titulo={"Populares"} />
       <CarruselCards pre={"Pizzas mas"} titulo={" Buscadas"} />
       <CarruselCards pre={"Hamburgesas mas"} titulo={" Pedidas"} />
     </div>
