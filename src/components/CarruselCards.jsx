@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
 import Card from "./Card";
 import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri";
 import { useContext } from "react";
 import { menuContext } from "../context/menuContext";
-const CarruselCards = ({ filtro, pre, titulo }) => {
-  const comidas = useContext(menuContext);
 
-  const comidasFiltradas = filtro
-    ? comidas.filter((comida) => comida.categoria === filtro)
-    : comidas;
+const CarruselCards = ({ filtro, pre, titulo }) => {
+  const { datos, loading } = useContext(menuContext);
+  const comidasFiltradas = filtro ? datos.filter((comida) => comida.categoria === filtro) : datos;
+
   return (
     <div className='max-w-[1200px] mx-auto bg-slate-50'>
       <div className='flex px-5 items-center justify-between'>

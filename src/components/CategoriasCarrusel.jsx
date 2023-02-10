@@ -7,7 +7,7 @@ import hamburgesa from "../assets/categoria-imagenes/Gerald_G_Fast_Food_Lunch_Di
 
 const CategoriasCarrusel = () => {
   return (
-    <div className='max-w-[1200px] p-4 py-8 mx-auto '>
+    <div className='max-w-[1200px] p-4 py-2 mx-auto '>
       <h4 className='md:text-3xl py-12 text-xl'>
         <span className='text-4xl font-bold text-yellow-400'>C</span>ategorias
       </h4>
