@@ -1,7 +1,7 @@
 import React from "react";
-import aboutUsImage from "../../assets/menu/ScreenShot_1.jpg";
-import aboutUsImage2 from "../../assets/menu/ScreenShot_2.jpg";
-import aboutUsImage3 from "../../assets/menu/ScreenShot_3.jpg";
+import aboutUsImage from "../../assets/menu/Screenshot_1.jpg";
+import aboutUsImage2 from "../../assets/menu/Screenshot_2.jpg";
+import aboutUsImage3 from "../../assets/menu/Screenshot_3.jpg";
 import { MdFastfood, MdOutlineDeliveryDining, MdRestaurantMenu } from "react-icons/md";
 import { FaPizzaSlice } from "react-icons/fa";
 
