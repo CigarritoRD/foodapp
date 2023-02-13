@@ -70,7 +70,7 @@ export const data = {
     {
       nombre: "clasica de pollo",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
-      categoria: "hamburgesa",
+      categoria: "pollo",
       imagen: hamburger7,
       precio: 250,
     },

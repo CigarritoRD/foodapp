@@ -7,7 +7,6 @@ import CrearCuenta from "../pages/CrearCuenta";
 import IniciarSesion from "../pages/IniciarSesion";
 import Menu from "../pages/Menu";
 import NotFound from "../pages/NotFound";
-import Pagar from "../pages/Pagar";
 import Usuario from "../pages/Usuario";
 import { Navigate, Route, Routes } from "react-router-dom";
 import MenuContextProvider from "../context/menuContext";
