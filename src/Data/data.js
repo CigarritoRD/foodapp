@@ -23,6 +23,7 @@ export const data = {
   redes: ["instagram", "facebook", "tiktok", "twitter"],
   productos: [
     {
+      id: 1,
       nombre: "doble carne y tosino",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "hamburgesas",
@@ -30,6 +31,7 @@ export const data = {
       precio: 440,
     },
     {
+      id: 2,
       nombre: "carne, jamon y queso",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "hamburgesas",
@@ -37,6 +39,7 @@ export const data = {
       precio: 460,
     },
     {
+      id: 3,
       nombre: "doble carne y queso",
       descripcion:
         "hamburgesa de doble carne angus hecha a la parrilla, con los ingredientes mas frescos",
@@ -45,6 +48,7 @@ export const data = {
       precio: 380,
     },
     {
+      id: 4,
       nombre: "doble carne de pollo",
       descripcion:
         "hamburgesa de carne de pollo a la plancha, con los ingredientes mas frescos y pan premium",
@@ -53,6 +57,7 @@ export const data = {
       precio: 330,
     },
     {
+      id: 5,
       nombre: "italiana clasica",
       descripcion:
         "hamburgesa de doble carne de res hecha a la parrilla, carne de pollo y  tres quesos",
@@ -61,6 +66,7 @@ export const data = {
       precio: 700,
     },
     {
+      id: 6,
       nombre: "pizza cuatro quesos",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pizza",
@@ -68,6 +74,7 @@ export const data = {
       precio: 680,
     },
     {
+      id: 7,
       nombre: "clasica de pollo",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pollo",
@@ -75,6 +82,7 @@ export const data = {
       precio: 250,
     },
     {
+      id: 8,
       nombre: "napolitana grande",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pizza",
@@ -82,6 +90,7 @@ export const data = {
       precio: 800,
     },
     {
+      id: 9,
       nombre: "peperoni y queso",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pizza",
@@ -89,6 +98,7 @@ export const data = {
       precio: 670,
     },
     {
+      id: 10,
       nombre: "noodles y res",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pastas",
@@ -96,6 +106,7 @@ export const data = {
       precio: 200,
     },
     {
+      id: 11,
       nombre: "noodles fritos con pollo",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pastas",
@@ -103,6 +114,7 @@ export const data = {
       precio: 230,
     },
     {
+      id: 12,
       nombre: "pennes jamon fresco",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pastas",
@@ -110,6 +122,7 @@ export const data = {
       precio: 280,
     },
     {
+      id: 13,
       nombre: "espagetuis con mariscos",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pastas",
@@ -117,6 +130,7 @@ export const data = {
       precio: 300,
     },
     {
+      id: 14,
       nombre: "pennes con queso",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pastas",
@@ -124,6 +138,7 @@ export const data = {
       precio: 250,
     },
     {
+      id: 15,
       nombre: "pollo en crema",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pollo",
@@ -131,6 +146,7 @@ export const data = {
       precio: 280,
     },
     {
+      id: 16,
       nombre: "pollo frito ",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pollo",
@@ -138,6 +154,7 @@ export const data = {
       precio: 360,
     },
     {
+      id: 17,
       nombre: "pollo empanizado",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pollo",
@@ -145,6 +162,7 @@ export const data = {
       precio: 240,
     },
     {
+      id: 18,
       nombre: "rollos de pollo",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pollo",
@@ -152,6 +170,7 @@ export const data = {
       precio: 300,
     },
     {
+      id: 19,
       nombre: "pollo horneado",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pizza",
@@ -159,6 +178,7 @@ export const data = {
       precio: 440,
     },
     {
+      id: 20,
       nombre: "sandwich de pollo",
       descripcion: "hamburgesa de doble carne de res hecha a la parrilla",
       categoria: "pollo",

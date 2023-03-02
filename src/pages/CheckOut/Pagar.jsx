@@ -1,7 +1,7 @@
 import React from "react";
 
 const Pagar = () => {
-  return <div>Pagar</div>;
+  return <HeroPages />;
 };
 
 export default Pagar;

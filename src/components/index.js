@@ -1,0 +1,13 @@
+export { default as AboutUs } from "./AboutUs/AboutUs";
+export { default as Card } from "./Card";
+export { default as CarruselCards } from "./CarruselCards";
+export { default as CategoriasCarrusel } from "./CategoriasCarrusel";
+export { default as Footer } from "./Footer/Footer";
+export * from "./Footer/OpcionFooter";
+export * from "./Footer/OpcionesFooter";
+export * from "./Header/Menu";
+export * from "./Header/Navbar";
+export * from "./Header";
+export { default as Hero } from "./Hero";
+export { default as Layout } from "./Layout/Layout";
+export * from "./heroPages";

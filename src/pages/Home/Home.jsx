@@ -1,9 +1,8 @@
 import React from "react";
-import Hero from "../components/Hero";
-import CarruselCards from "../components/CarruselCards";
-
-import CategoriasCarrusel from "../components/CategoriasCarrusel";
-import AboutUs from "../components/AboutUs/AboutUs";
+import Hero from "../../components/Hero";
+import CarruselCards from "../../components/CarruselCards";
+import CategoriasCarrusel from "../../components/CategoriasCarrusel";
+import AboutUs from "../../components/AboutUs/AboutUs";
 
 const Home = () => {
   return (

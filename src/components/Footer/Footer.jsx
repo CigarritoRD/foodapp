@@ -3,7 +3,7 @@ import { OpcionesFooter } from "./OpcionesFooter";
 
 const Footer = () => {
   return (
-    <footer className='border'>
+    <footer className='border '>
       <div className='grid md:grid-cols-3 gap-4 px-4 pt-10 max-w-[1200px] mx-auto'>
         <div>
           <p className='text-xl font-bold capitalize py-2'>delicius FF</p>
@@ -12,7 +12,7 @@ const Footer = () => {
             consectetur adipisicing elit. Quod, hic?
           </p>
           <p>
-            <span className='font-bold'>horario:</span> lun a Dom{" "}
+            <span className='font-bold'>horario:</span> lun a Dom
           </p>
           <p> de 9:00am a 11:00pm </p>
         </div>

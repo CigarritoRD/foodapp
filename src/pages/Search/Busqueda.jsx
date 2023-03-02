@@ -1,7 +1,8 @@
 import React from "react";
+import { HeroPages } from "../../components";
 
 const Busqueda = () => {
-  return <div>Busqueda</div>;
+  return <HeroPages />;
 };
 
 export default Busqueda;

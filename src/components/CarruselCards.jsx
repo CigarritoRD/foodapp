@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { menuContext } from "../context/menuContext";
 
 const CarruselCards = ({ filtro, pre, titulo }) => {
-  const { datos, loading } = useContext(menuContext);
+  const { datos } = useContext(menuContext);
   const comidasFiltradas = filtro ? datos.filter((comida) => comida.categoria === filtro) : datos;
 
   return (
@@ -23,7 +23,7 @@ const CarruselCards = ({ filtro, pre, titulo }) => {
           </button>
         </div>
       </div>
-      <div className='flex overflow-x-scroll py-8 px-4 gap-4 scrollbar-hide'>
+      <div className='flex overflow-x-scroll py-8 px-4 gap-2 md:gap-4 scrollbar-hide'>
         {comidasFiltradas.map((comida) => {
           return <Card key={comida.imagen} data={comida} />;
         })}

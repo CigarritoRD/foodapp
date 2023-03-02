@@ -1,7 +1,8 @@
 import React from "react";
+import { HeroPages } from "../../components";
 
 const IniciarSesion = () => {
-  return <div>IniciarSesion</div>;
+  return <HeroPages />;
 };
 
 export default IniciarSesion;

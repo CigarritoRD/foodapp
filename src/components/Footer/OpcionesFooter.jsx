@@ -5,9 +5,10 @@ import { OpcionFooter } from "./OpcionFooter";
 export const OpcionesFooter = ({ title }) => {
   const { productos } = data;
   const categorias = new Set(productos.map(({ categoria }) => categoria));
+  console.log(categorias);
 
   return (
-    <div className=''>
+    <div>
       <p className='text-xl font-bold capitalize py-2'>{title}</p>
       <ul>
         {categorias && [...categorias].map((item) => <OpcionFooter key={item} option={item} />)}
