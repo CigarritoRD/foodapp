@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createContext } from "react";
-import { getLocalStorage, setLocalStograge } from "../helpers";
+
+import { getLocalStorage, itemToRemove, setLocalStograge, updateProducts } from "../helpers";
 
 const keyLocalStorage = {
   carrito: "carrito",
@@ -15,15 +16,32 @@ export const carritoContext = createContext({});
 const carritoContextProvider = ({ children }) => {
   const [carrito, setCarrito] = useState(initialState);
 
+  // ADD ITEM TO CART
+
   const addItemToCart = (item) => {
-    setLocalStograge(keyLocalStorage.carrito, item);
-    setCarrito(item);
+    const existeProducto = carrito.find((producto) => producto.id === item.id);
+
+    if (existeProducto) {
+      const updatedCart = updateProducts(carrito, item);
+      setCarrito(updatedCart);
+      setLocalStograge(keyLocalStorage.carrito, updatedCart);
+    } else {
+      setCarrito((prev) => {
+        const newItem = { ...item, cantidad: 1 };
+        setLocalStograge(keyLocalStorage.carrito, [...carrito, newItem]);
+        return [...prev, newItem];
+      });
+    }
   };
 
-  const removeItemOfCart = (id) => {
-    const itemToRemove = carrito.filter((article) => article.id !== id);
-    setLocalStograge(keyLocalStorage.carrito, itemToRemove);
-    setCarrito(itemToRemove);
+  // REMOVE ITEM OF CART
+  const removeItemOfCart = (item) => {
+    const { id } = item;
+    const updatedCart = itemToRemove(carrito, item);
+    if (id) {
+      setCarrito(updatedCart);
+      setLocalStograge(keyLocalStorage.carrito, updatedCart);
+    }
   };
 
   const resetCart = () => {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RiSearchLine, RiShoppingBasketLine, RiUser3Line } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
+import { cantidadDeArticulos } from "../../../helpers";
 import { useCarrito } from "../../../hooks/useCarrito";
 import CarritoModal from "../CarritoModal/CarritoModal";
 const NavBar = () => {
@@ -65,7 +66,7 @@ const NavBar = () => {
           className='relative cursor-pointer hover:bg-yellow-400 duration-200 border rounded-full p-1'
         >
           <div className='p-3 absolute -top-3 -right-2 text-sm bg-green-600 h-4 w-4 rounded-full flex justify-center items-center  text-white'>
-            {carrito.length}
+            {cantidadDeArticulos(carrito)}
           </div>
           <RiShoppingBasketLine size={25} />
         </li>
