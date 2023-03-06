@@ -1,3 +1,5 @@
+import { cantidadDeArticulos, showToast, sumaTotal } from "../../../helpers";
+import { TOAST_OPTIONS } from "../../../helpers/toastOptions.helpers";
 import { useCarrito } from "../../../hooks/useCarrito";
 
 const CarritoModal = ({ showCarrito, cerrarCarrito }) => {
@@ -19,7 +21,8 @@ const CarritoModal = ({ showCarrito, cerrarCarrito }) => {
         Tu <span className='text-yellow-400'>Carrito</span>
       </h4>
       <h4 className='text-lg font-medium text-center p-2'>
-        tienes 3 articulos por un total de: 800.00 $
+        tienes <strong>{cantidadDeArticulos(carrito)}</strong> articulos por un total de:{" "}
+        {sumaTotal(carrito)} $`
       </h4>
       <div className='flex flex-col items-center justify-center gap-4 p-4'>
         <button className='w-full border rounded-full py-2 bg-yellow-400'>Pagar Articulos</button>
@@ -52,13 +55,25 @@ const CarritoModal = ({ showCarrito, cerrarCarrito }) => {
                   <p className='font-bold'>{item.precio}.00 $</p>
                 </div>
                 <div className='flex gap-4 items-center justify-between'>
-                  <button className='border rounded-full h-8 w-8 flex items-center justify-center  text-xl  p-2'>
+                  <button
+                    onClick={() => {
+                      addItemToCart(item);
+                      showToast(TOAST_OPTIONS.SUCCESS.TYPE, TOAST_OPTIONS.SUCCESS.TEXT);
+                    }}
+                    className='border rounded-full h-8 w-8 flex items-center justify-center  text-xl  p-2'
+                  >
                     +
                   </button>
-                  <button className='border rounded-full h-8 w-8  flex items-center justify-center  text-xl p-2'>
+                  <button
+                    onClick={() => {
+                      removeItemOfCart(item);
+                      showToast(TOAST_OPTIONS.WARN.TYPE, TOAST_OPTIONS.WARN.TEXT);
+                    }}
+                    className='border rounded-full h-8 w-8  flex items-center justify-center  text-xl p-2'
+                  >
                     -
                   </button>
-                  Cantidad: 2
+                  {`Cantidad: ${item.cantidad}`}
                 </div>
               </div>
             </div>

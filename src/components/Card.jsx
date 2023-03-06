@@ -1,8 +1,10 @@
 import { RiShoppingBasketLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { showToast } from "../helpers";
+import { TOAST_OPTIONS } from "../helpers/toastOptions.helpers";
 import { useCarrito } from "../hooks/useCarrito";
 const Card = ({ data }) => {
-  const { addItemToCart, carrito } = useCarrito();
+  const { addItemToCart } = useCarrito();
   return (
     <div className='relative border rounded-xl'>
       <Link to={`/comprar/${data.nombre}`}>
@@ -26,7 +28,10 @@ const Card = ({ data }) => {
         </div>
       </Link>
       <RiShoppingBasketLine
-        onClick={() => addItemToCart([...carrito, data])}
+        onClick={() => {
+          addItemToCart(data);
+          showToast(TOAST_OPTIONS.SUCCESS.TYPE, TOAST_OPTIONS.SUCCESS.TEXT);
+        }}
         size={20}
         color={"gray"}
         className={

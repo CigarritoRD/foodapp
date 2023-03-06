@@ -2,11 +2,13 @@ import { useParams } from "react-router-dom";
 import { useSingleProduct } from "../../hooks/useSingleProduct";
 import { useCarrito } from "../../hooks/useCarrito";
 import CardProduct from "./components/Card";
+import { showToast } from "../../helpers";
+import { TOAST_OPTIONS } from "../../helpers/toastOptions.helpers";
 
 const Product = () => {
   const { nombre } = useParams();
   const { singleProduct } = useSingleProduct(nombre);
-  const { carrito, addItemToCart } = useCarrito();
+  const { addItemToCart } = useCarrito();
 
   return (
     <div className='min-h-[600px] grid place-content-center'>
@@ -28,7 +30,10 @@ const Product = () => {
             </div>
             <div className='flex justify-between flex-col md:flex-row bg-gray-100 p-4 gap-2'>
               <button
-                onClick={() => addItemToCart([...carrito, item])}
+                onClick={() => {
+                  addItemToCart(item);
+                  showToast(TOAST_OPTIONS.SUCCESS.TYPE, TOAST_OPTIONS.SUCCESS.TEXT);
+                }}
                 className='border rounded-full lg:px-6 md:px-4 py-2 bg-yellow-400'
               >
                 Agregar al carrito
@@ -36,13 +41,8 @@ const Product = () => {
               <div className='flex  justify-between items-center gap-4'>
                 cantidad
                 <div className='flex items-center gap-4'>
-                  <button className='bg-yellow-400 md:text-xl lg:text-3xl border rounded-full flex justify-center items-center h-10 w-10'>
-                    +
-                  </button>
-                  1
-                  <button className='border  rounded-full md:text-xl lg:text-3xl flex justify-center items-center h-10 w-10'>
-                    -
-                  </button>
+                  <button>+</button>
+                  <button>-</button>
                 </div>
               </div>
               <button className='border rounded-full lg:px-6 md:px-4 py-2 bg-white'>pagar</button>
