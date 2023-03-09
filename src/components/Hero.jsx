@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 const Hero = () => {
   return (
-    <div className='bg-black/80 mt-20 border-green-400 border relative h-[600px]'>
-      <div className='w-full h-[600px] absolute -z-10'>
+    <div className=' mt-20 bg-black/90 relative md:h-[600px]'>
+      <div className='w-full h-full md:h-[600px] absolute -z-10'>
         <img
-          className='w-full h-[600px] object-cover'
+          className='w-full h-full md:h-[600px] object-cover'
           src='https://cdn.pixabay.com/photo/2017/09/22/23/57/fire-2777580_1280.jpg'
           alt=''
         />
@@ -31,13 +31,26 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className='flex relative items-center drop-shadow-xl justify-center p-4 md:p-0 rounded-2xl overflow-hidden'>
-          <img
-            className='w-full h-full object-cover'
-            src='https://es.rc-cdn.community.thermomix.com/recipeimage/s3x1gsfi-3d839-205138-cfcd2-3qsm0j1y/148f620b-8050-4bd2-9dd6-aca7af1154e2/main/hamburguesa-de-ternera.jpg'
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1.25, opacity: 1 }}
+          transition={{ duration: 1, type: "spring" }}
+          className='flex relative items-center justify-center p-4 md:p-0 rounded-2xl overflow-hidden scale-125 '
+        >
+          <motion.img
+            animate={{ x: [6, -5, 8, -7], y: [8, -8, 4, -6] }}
+            transition={{
+              delay: 1,
+              duration: 10,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className='w-full h-full object-cover drop-shadow-[0_35px_35px_rgba(0,0,0,0.80)]'
+            // src='https://es.rc-cdn.community.thermomix.com/recipeimage/s3x1gsfi-3d839-205138-cfcd2-3qsm0j1y/148f620b-8050-4bd2-9dd6-aca7af1154e2/main/hamburguesa-de-ternera.jpg'
+            src='https://o.remove.bg/downloads/5b2caf72-df11-4497-a30c-39a3fb398993/amirali-mirhashemian-sc5sTPMrVfk-unsplash-removebg-preview.png'
             alt=''
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
