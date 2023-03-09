@@ -9,7 +9,7 @@ export const OpcionesFooter = ({ title }) => {
 
   return (
     <div>
-      <p className='text-xl font-bold capitalize py-2'>{title}</p>
+      <p className='text-xl font-bold capitalize py-2 border-y border-slate-700'>{title}</p>
       <ul>
         {categorias && [...categorias].map((item) => <OpcionFooter key={item} option={item} />)}
       </ul>

@@ -16,13 +16,16 @@ export const cantidadDeArticulos = (carrito) => {
   return total;
 };
 
-export const itemToRemove = (carrito, item) => {
-  const { id } = item;
+export const itemToRemove = (carrito, item, deleteAll) => {
+  console.log(deleteAll);
+  if (deleteAll) return carrito.filter((articulo) => articulo.id !== item.id);
+
   const itemToRemove =
     item.cantidad === 1
-      ? carrito.filter((articulo) => articulo.id !== id)
+      ? carrito.filter((articulo) => articulo.id !== item.id)
       : carrito.map((articulo) => {
           if (articulo.id === item.id) return { ...articulo, cantidad: articulo.cantidad - 1 };
+          return articulo;
         });
   return itemToRemove;
 };

@@ -6,7 +6,7 @@ import AboutUs from "../../components/AboutUs/AboutUs";
 
 const Home = () => {
   return (
-    <div className=''>
+    <>
       <Hero />
       <CategoriasCarrusel />
       <CarruselCards filtro={""} pre={"Mas "} titulo={"Populares"} />
@@ -21,7 +21,7 @@ const Home = () => {
         </div>
         <AboutUs />
       </div>
-    </div>
+    </>
   );
 };
 

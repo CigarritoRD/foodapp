@@ -1,5 +1,6 @@
 import React from "react";
 import Routers from "../../routes/Routers";
+import { FooterInfo } from "../Footer";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
@@ -10,7 +11,9 @@ const Layout = () => {
       <div>
         <Routers />
       </div>
-      <Footer />
+      <Footer>
+        <FooterInfo />
+      </Footer>
     </>
   );
 };

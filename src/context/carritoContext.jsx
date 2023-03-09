@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { createContext } from "react";
 
-import { getLocalStorage, itemToRemove, setLocalStograge, updateProducts } from "../helpers";
+import {
+  getLocalStorage,
+  itemToRemove,
+  setLocalStograge,
+  showToast,
+  updateProducts,
+} from "../helpers";
+import { TOAST_OPTIONS } from "../helpers/toastOptions.helpers";
 
 const keyLocalStorage = {
   carrito: "carrito",
@@ -32,15 +39,18 @@ const carritoContextProvider = ({ children }) => {
         return [...prev, newItem];
       });
     }
+    showToast(TOAST_OPTIONS.SUCCESS.TYPE, TOAST_OPTIONS.SUCCESS.TEXT);
   };
 
   // REMOVE ITEM OF CART
-  const removeItemOfCart = (item) => {
-    const { id } = item;
-    const updatedCart = itemToRemove(carrito, item);
-    if (id) {
+  const removeItemOfCart = (item, deleteAll = false) => {
+    const existeProducto = carrito.find((producto) => producto.id === item.id);
+    if (existeProducto) {
+      const updatedCart = itemToRemove(carrito, item, deleteAll);
       setCarrito(updatedCart);
       setLocalStograge(keyLocalStorage.carrito, updatedCart);
+    } else {
+      console.log("Articulo inexistente");
     }
   };
 

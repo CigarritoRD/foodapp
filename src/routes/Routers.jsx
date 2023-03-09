@@ -1,5 +1,4 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import CarritoContextProvider from "../context/carritoContext";
 import MenuContextProvider from "../context/menuContext";
 import {
   Busqueda,
@@ -9,10 +8,10 @@ import {
   IniciarSesion,
   Menu,
   NotFound,
-  Product,
   Shop,
   Usuario,
 } from "../pages";
+import { Product } from "../pages/Product";
 
 const Router = () => {
   return (
