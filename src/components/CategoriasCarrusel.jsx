@@ -14,7 +14,7 @@ const CategoriasCarrusel = () => {
       <ul className='flex  font-bold gap-4 w-full overflow-x-scroll scrollbar-hide overflow-y-hidden  h-20 items-center'>
         <li>
           <Link
-            to={"/categorias/pizza"}
+            to={"/comprar?categoria=pizza"}
             className='p-1 inline-flex items-center gap-4 w-[200px] rounded-xl  border-2  border-yellow-400 hover:translate-y-[-5px] bg-yellow-400 duration-200'
           >
             <img className=' h-12' src={pizza} alt='' />
@@ -24,7 +24,7 @@ const CategoriasCarrusel = () => {
 
         <li>
           <Link
-            to={"/categorias/hamburgesas"}
+            to={"/comprar?categoria=hamburgesas"}
             className='p-1 inline-flex items-center gap-4 w-[200px]  rounded-xl  border-2 border-yellow-400 hover:translate-y-[-5px] bg-yellow-400 duration-200'
           >
             <img className=' h-12' src={hamburgesa} alt='' />
@@ -33,7 +33,7 @@ const CategoriasCarrusel = () => {
         </li>
         <li>
           <Link
-            to={"/categorias/pasta"}
+            to={"/comprar?categoria=pastas"}
             className='p-1 inline-flex items-center gap-4 w-[200px] rounded-xl  border-2 border-yellow-400 hover:translate-y-[-5px] bg-yellow-400 duration-200'
           >
             <img className=' h-12' src={pastas} alt='' />
@@ -42,7 +42,7 @@ const CategoriasCarrusel = () => {
         </li>
         <li>
           <Link
-            to={"/categorias/pollo"}
+            to={"/comprar?categoria=pollo"}
             className='p-1 inline-flex items-center gap-4 w-[200px]  rounded-xl  border-2 border-yellow-400 hover:translate-y-[-5px] bg-yellow-400 duration-200'
           >
             <img className=' h-12' src={pollo} alt='' /> Pollo frito

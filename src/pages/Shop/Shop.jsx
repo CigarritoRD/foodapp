@@ -1,7 +1,6 @@
-import React, { useState } from "react";
-
 import {
   Card,
+  CategoriasCarrusel,
   HeroPages,
   ProductCardImage,
   ProductCardInfo,
@@ -11,21 +10,31 @@ import SearchForm from "../../components/SearchForm/SearchForm";
 import { filteredItems } from "../../helpers/filtrarProductos";
 import { useMenuContext } from "../../hooks/useMenuContext";
 import { motion, AnimatePresence } from "framer-motion";
+import useSearch from "../../hooks/useSearch";
+import { useSearchParams } from "react-router-dom";
 
 const Shop = () => {
   const { datos } = useMenuContext();
-  const [term, setTerm] = useState("");
+  const [URLSearchParams] = useSearchParams();
+  const param = URLSearchParams.get("searchbar");
+  const categoria = URLSearchParams.get("categoria");
+
+  const { term, setTerm } = useSearch(param);
 
   const onChangeHandler = (e) => {
-    setTerm(e.target.value);
-    console.log(term);
+    e.preventDefault();
+    const { value } = e.target;
+    setTerm(value);
   };
+
+  const platosFiltrados = filteredItems(datos, term, categoria);
 
   return (
     <>
       <HeroPages />
       <div className='max-w-[1200px] mx-auto'>
-        <SearchForm onChangeHandler={onChangeHandler} />
+        <SearchForm value={term} onChangeHandler={onChangeHandler} />
+        <CategoriasCarrusel />
         <motion.div
           layout
           style={{
@@ -34,8 +43,9 @@ const Shop = () => {
           className=' grid gap-2'
         >
           <AnimatePresence>
-            {filteredItems(datos, term).map((item) => (
+            {platosFiltrados.map((item) => (
               <Card
+                key={item.id}
                 data={
                   <ProductCardInfo>
                     <ProductStarsFiller />

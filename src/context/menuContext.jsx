@@ -10,7 +10,6 @@ const menuContextProvider = ({ children }) => {
   useEffect(() => {
     console.log(data.productos);
     setDatos(data.productos);
-    console.log(datos);
   }, []);
 
   return <menuContext.Provider value={{ datos, loading }}>{children}</menuContext.Provider>;

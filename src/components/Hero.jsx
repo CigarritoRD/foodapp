@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import hamberger from "../assets/hamberguer.png";
 const Hero = () => {
   return (
     <div className=' mt-20 bg-black/90 relative md:h-[600px]'>
@@ -47,7 +48,7 @@ const Hero = () => {
             }}
             className='w-full h-full object-cover drop-shadow-[0_35px_35px_rgba(0,0,0,0.80)]'
             // src='https://es.rc-cdn.community.thermomix.com/recipeimage/s3x1gsfi-3d839-205138-cfcd2-3qsm0j1y/148f620b-8050-4bd2-9dd6-aca7af1154e2/main/hamburguesa-de-ternera.jpg'
-            src='https://o.remove.bg/downloads/5b2caf72-df11-4497-a30c-39a3fb398993/amirali-mirhashemian-sc5sTPMrVfk-unsplash-removebg-preview.png'
+            src={hamberger}
             alt=''
           />
         </motion.div>
