@@ -34,9 +34,9 @@ const CarritoModal = ({ showCarrito, cerrarCarrito }) => {
           >
             Vaciar carrito
           </button>
-          <button className='w-full border-2 border-yellow-400 rounded-full py-2'>
+          {/* <button onClick={} className='w-full border-2 border-yellow-400 rounded-full py-2'>
             Seguir Comprando
-          </button>
+          </button> */}
         </div>
         <div className='flex flex-col  w-full gap-2'>
           {carrito.map((item) => (

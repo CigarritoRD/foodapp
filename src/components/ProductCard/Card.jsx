@@ -14,11 +14,11 @@ const Card = ({ data, image, item }) => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duratio: 0.8 }}
       exit={{ opacity: 0, scale: 0.8 }}
-      className='relative border rounded-xl max-w-[600px]'
+      className='relative rounded-xl max-w-[600px] group'
     >
       {/* LINK TO PRODUCT */}
       <Link to={`/comprar/${item.nombre}`}>
-        <div className='card shadow-xl shadow-black/10 flex flex-col relative overflow-y-clip rounded-xl w-full min-w-[180px] md:min-w-[200px] max-w-[600px]  h-[300px]'>
+        <div className='group-hover:scale-105 duration-200 card shadow-md shadow-black/15 flex flex-col relative overflow-y-clip rounded-xl w-full min-w-[180px] md:min-w-[200px] max-w-[600px]  h-[300px]'>
           {image}
           <div className='flex-1'></div>
           {data}
@@ -30,9 +30,9 @@ const Card = ({ data, image, item }) => {
       <RiShoppingBasketLine
         onClick={() => addItemToCart(item)}
         size={20}
-        color={"gray"}
+        color={"white"}
         className={
-          "border absolute bottom-3 right-3 rounded-full h-8 w-8 bg-yellow-400 p-1 hover:shadow-md hover:scale-105 hover:cursor-pointer"
+          "group-hover:scale-105 group-hover:translate-y-1 group-hover:translate-x-1 absolute bottom-3 right-3 rounded-full h-8 w-8 bg-yellow-400 p-1 hover:shadow-md duration-100 hover:scale-110 hover:cursor-pointer"
         }
       />
       {/* BASKET ICON */}

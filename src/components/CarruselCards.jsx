@@ -2,17 +2,30 @@ import Card from "./ProductCard/Card";
 import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri";
 import { useContext } from "react";
 import { menuContext } from "../context/menuContext";
+import { motion, useInView } from "framer-motion";
 
 import { ProductCardImage, ProductCardInfo, ProductStarsFiller } from "./ProductCard";
 import { CategoriaInfo, CategoriaTitulo, CategoriaBotones, CategoriaBoton } from "./index";
+import { useRef } from "react";
 
 const CarruselCards = ({ filtro, pre, titulo }) => {
   const { datos } = useContext(menuContext);
 
+  const ref = useRef(null);
+
+  const isInView = useInView(ref, { once: true });
+
   const comidasFiltradas = filtro ? datos.filter((comida) => comida.categoria === filtro) : datos;
 
   return (
-    <div className='max-w-[1200px] mx-auto bg-slate-50'>
+    <motion.div
+      ref={ref}
+      style={{ overflow: "hidden" }}
+      initial={{ opacity: 0, y: "50%" }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView && "0%" }}
+      transition={{ duration: 0.5, type: "spring", bounce: 0.3 }}
+      className='max-w-[1200px] mx-auto bg-slate-50'
+    >
       <CategoriaInfo>
         <CategoriaTitulo pre={pre} titulo={titulo} />
         <CategoriaBotones>
@@ -40,7 +53,7 @@ const CarruselCards = ({ filtro, pre, titulo }) => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
