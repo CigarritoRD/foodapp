@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
+import { ScrollToTop } from "../components/ScrollToTop/ScrollToTop";
 import MenuContextProvider from "../context/menuContext";
 import {
   Busqueda,
