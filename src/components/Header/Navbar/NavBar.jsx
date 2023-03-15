@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const NavBar = () => {
   const { carrito } = useCarrito();
   const [showCarrito, setShowCarrito] = useState(false);
-  const [openSearch, setOpenSearch] = useState(true);
+  const [openSearch, setOpenSearch] = useState(false);
 
   const handleShowCarrito = () => {
     setShowCarrito(!showCarrito);
@@ -21,7 +21,7 @@ const NavBar = () => {
     e.preventDefault();
     const query = e.target[0].value;
     if (!query) return setOpenSearch(!openSearch);
-    navigate(`/comprar/?searchbar=${e.target[0].value}`);
+    navigate(`/comprar/?searchbar=${query}`);
   };
 
   return (

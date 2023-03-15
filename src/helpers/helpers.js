@@ -17,7 +17,6 @@ export const cantidadDeArticulos = (carrito) => {
 };
 
 export const itemToRemove = (carrito, item, deleteAll) => {
-  console.log(deleteAll);
   if (deleteAll) return carrito.filter((articulo) => articulo.id !== item.id);
 
   const itemToRemove =

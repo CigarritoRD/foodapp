@@ -9,7 +9,7 @@ export const useSingleProduct = (nombre) => {
   };
   useEffect(() => {
     setSingleProduct(oneProduct(datos, nombre));
-  }, [datos]);
+  }, [nombre]);
 
   return { singleProduct };
 };
