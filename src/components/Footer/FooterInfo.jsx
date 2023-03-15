@@ -12,7 +12,7 @@ const FooterInfo = () => {
             <Logo />
           </div>
           <p className='py-4'>
-            <span className='font-bold'>Direccion:</span> calle X, #67 Lorem ipsum, dolor sit amet
+            <span className='font-bold'>Direccion:</span> Calle X, #67 Lorem ipsum, dolor sit amet
             consectetur adipisicing elit. Quod, hic?
           </p>
           <p>
@@ -23,7 +23,7 @@ const FooterInfo = () => {
         <OpcionesFooter title={"Categorias"} />
         <OpcionesFooter title={"Siguenos"} />
       </div>
-      <div className='p-6 mt-4 text-center bg-black text-slate-50'>
+      <div className='p-6 mt-4 text-center bg-slate-900 text-slate-50'>
         <p>todos los derechos reservados Cigarrito RD</p>
       </div>
     </>
