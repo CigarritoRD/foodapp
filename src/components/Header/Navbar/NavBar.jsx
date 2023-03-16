@@ -49,7 +49,6 @@ const NavBar = () => {
             />
             <button
               name='searchbutton'
-              aria-label='boton de busqueda'
               role={"search"}
               type='submit'
               className='top-1 right-1 absolute cursor-pointer hover:bg-yellow-400 duration-200 border rounded-full p-1'
