@@ -49,7 +49,6 @@ const NavBar = () => {
             />
             <button
               name='searchbutton'
-              role={"search"}
               type='submit'
               className='top-1 right-1 absolute cursor-pointer hover:bg-yellow-400 duration-200 border rounded-full p-1'
             >
@@ -69,7 +68,7 @@ const NavBar = () => {
           </li>
           <li className='cursor-pointer hover:bg-yellow-400 duration-200 border rounded-full p-1'>
             <NavLink role={"link"} to={"usuario"}>
-              <RiUser3Line size={25} />
+              <RiUser3Line name='userLink' size={25} />
             </NavLink>
           </li>
         </ul>
