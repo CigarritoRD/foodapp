@@ -48,6 +48,7 @@ const NavBar = () => {
               id=''
             />
             <button
+              name='searchbutton'
               aria-label='boton de busqueda'
               role={"search"}
               type='submit'
