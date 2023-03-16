@@ -14,7 +14,7 @@ const keyLocalStorage = {
   carrito: "carrito",
 };
 
-const existeProducto = (item) => carrito.find((producto) => producto.id === item.id);
+const existeProducto = (carrito, item) => carrito.find((producto) => producto.id === item.id);
 
 const initialState = getLocalStorage(keyLocalStorage.carrito)
   ? JSON.parse(getLocalStorage(keyLocalStorage.carrito))
@@ -28,7 +28,7 @@ const carritoContextProvider = ({ children }) => {
   // ADD ITEM TO CART
 
   const addItemToCart = (item) => {
-    if (existeProducto(item)) {
+    if (existeProducto(carrito, item)) {
       const updatedCart = updateProducts(carrito, item);
       setCarrito(updatedCart);
       setLocalStograge(keyLocalStorage.carrito, updatedCart);
@@ -44,7 +44,7 @@ const carritoContextProvider = ({ children }) => {
 
   // REMOVE ITEM OF CART
   const removeItemOfCart = (item, deleteAll = false) => {
-    if (existeProducto(item)) {
+    if (existeProducto(carrito, item)) {
       const updatedCart = itemToRemove(carrito, item, deleteAll);
       setCarrito(updatedCart);
       setLocalStograge(keyLocalStorage.carrito, updatedCart);

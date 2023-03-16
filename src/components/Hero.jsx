@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import hamberger from "../assets/hamberguer.png";
+import background from "../assets/HeroBackground.jpg";
 const Hero = () => {
   return (
     <div className=' mt-20 bg-black/90 relative md:h-[600px]'>
       <div className='w-full h-full md:h-[600px] absolute -z-10'>
-        <img className='w-full h-full md:h-[600px] object-cover' src={hamberger} alt='' />
+        <img className='w-full h-full md:h-[600px] object-cover' src={background} alt='' />
       </div>
       <div className=' max-w-[1200px] md:h-[600px] place-content-center grid md:grid-cols-2 gap-4 md:p-4 pt-10  mx-auto'>
         <div className='px-4 lg:px-0 mx-auto flex flex-col gap-8 justify-center'>
