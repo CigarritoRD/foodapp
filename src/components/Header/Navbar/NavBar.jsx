@@ -48,6 +48,8 @@ const NavBar = () => {
               id=''
             />
             <button
+              aria-label='boton de busqueda'
+              role={"search"}
               type='submit'
               className='top-1 right-1 absolute cursor-pointer hover:bg-yellow-400 duration-200 border rounded-full p-1'
             >
@@ -63,10 +65,10 @@ const NavBar = () => {
             <div className='p-3 absolute -top-3 -right-2 text-sm bg-green-600 h-4 w-4 rounded-full flex justify-center items-center  text-white'>
               {cantidadDeArticulos(carrito)}
             </div>
-            <RiShoppingBasketLine size={25} />
+            <RiShoppingBasketLine role={"menuitem"} size={25} />
           </li>
           <li className='cursor-pointer hover:bg-yellow-400 duration-200 border rounded-full p-1'>
-            <NavLink to={"usuario"}>
+            <NavLink role={"link"} to={"usuario"}>
               <RiUser3Line size={25} />
             </NavLink>
           </li>
