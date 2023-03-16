@@ -3,7 +3,7 @@ import Hero from "../../components/Hero";
 import CarruselCards from "../../components/CarruselCards";
 import CategoriasCarrusel from "../../components/CategoriasCarrusel";
 import AboutUs from "../../components/AboutUs/AboutUs";
-import firebbq from "../../assets/firebbq.jpeg";
+import firebbq from "../../assets/firebbq.jpg";
 
 const Home = () => {
   return (
