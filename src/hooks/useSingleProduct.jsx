@@ -1,15 +1,16 @@
-import { useEffect, useState } from "react";
-import { useMenuContext } from "./useMenuContext";
+import { useEffect, useState } from 'react'
+import { useProductsContext } from './useProductsContext'
 
 export const useSingleProduct = (nombre) => {
-  const { datos } = useMenuContext();
-  const [singleProduct, setSingleProduct] = useState([]);
-  const oneProduct = (datos, nombre) => {
-    return datos.filter((item) => item.nombre === nombre);
-  };
-  useEffect(() => {
-    setSingleProduct(oneProduct(datos, nombre));
-  }, [nombre]);
+  const { products } = useProductsContext()
+  const [singleProduct, setSingleProduct] = useState([])
 
-  return { singleProduct };
-};
+  const getOneProduct = (products, nombre) => {
+    return products.filter((item) => item.nombre === nombre)
+  }
+  useEffect(() => {
+    setSingleProduct(getOneProduct(products, nombre))
+  }, [nombre])
+
+  return { singleProduct }
+}

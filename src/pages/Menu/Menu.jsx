@@ -1,18 +1,13 @@
-import { useContext } from "react";
-import { HeroPages, MenuList } from "../../components";
 
-import { menuContext } from "../../context/menuContext";
+import { HeroPages, MenuList } from '../../components'
 
 const Menu = () => {
-  const { datos } = useContext(menuContext);
-  const categoriasFiltradas = new Set(datos.map((item) => item.categoria));
-
   return (
     <>
       <HeroPages />
-      <MenuList categoriasFiltradas={categoriasFiltradas} datos={datos} />;
+      <MenuList />;
     </>
-  );
-};
+  )
+}
 
-export default Menu;
+export default Menu

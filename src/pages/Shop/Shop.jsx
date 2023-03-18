@@ -4,41 +4,41 @@ import {
   HeroPages,
   ProductCardImage,
   ProductCardInfo,
-  ProductStarsFiller,
-} from "../../components";
-import SearchForm from "../../components/SearchForm/SearchForm";
-import { filteredItems } from "../../helpers/filtrarProductos";
-import { useMenuContext } from "../../hooks/useMenuContext";
-import { motion, AnimatePresence } from "framer-motion";
-import useSearch from "../../hooks/useSearch";
-import { useSearchParams } from "react-router-dom";
+  ProductStarsFiller
+} from '../../components'
+import SearchForm from '../../components/SearchForm/SearchForm'
+import { filteredItems } from '../../helpers/filtrarProductos'
+import { useProductsContext } from '../../hooks/useProductsContext'
+import { motion, AnimatePresence } from 'framer-motion'
+import useSearch from '../../hooks/useSearch'
+import { useSearchParams } from 'react-router-dom'
 
 const Shop = () => {
-  const { datos } = useMenuContext();
-  const [URLSearchParams] = useSearchParams();
-  const param = URLSearchParams.get("searchbar");
-  const categoria = URLSearchParams.get("categoria");
+  const { datos } = useProductsContext()
+  const [URLSearchParams] = useSearchParams()
+  const param = URLSearchParams.get('searchbar')
+  const categoria = URLSearchParams.get('categoria')
 
-  const { term, setTerm } = useSearch(param);
+  const { term, setTerm } = useSearch(param)
 
   const onChangeHandler = (e) => {
-    e.preventDefault();
-    const { value } = e.target;
-    setTerm(value);
-  };
+    e.preventDefault()
+    const { value } = e.target
+    setTerm(value)
+  }
 
-  const platosFiltrados = filteredItems(datos, term, categoria);
+  const platosFiltrados = filteredItems(datos, term, categoria)
 
   return (
     <>
       <HeroPages />
-      <div className='max-w-[1200px] mx-auto'>
+      <div className='max-w-[1200px] mx-auto p-4'>
         <SearchForm value={term} onChangeHandler={onChangeHandler} />
         <CategoriasCarrusel />
         <motion.div
           layout
           style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))",
+            gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))'
           }}
           className=' grid gap-2'
         >
@@ -63,7 +63,7 @@ const Shop = () => {
         </motion.div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Shop;
+export default Shop

@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 const useSearch = (param) => {
-  const [term, setTerm] = useState("");
+  const [term, setTerm] = useState('')
 
   useEffect(() => {
-    if (param) return setTerm(param);
-    setTerm("");
-  }, [param]);
-  return { term, setTerm };
-};
+    if (param) return setTerm(param)
+    setTerm('')
+  }, [param])
+  return { term, setTerm }
+}
 
-export default useSearch;
+export default useSearch

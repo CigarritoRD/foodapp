@@ -1,4 +1,4 @@
-export * from "./CarritoModal";
+export * from "./CartModal";
 export { default as Header } from "./Header";
 export * from "./Menu";
 export * from "./Navbar";

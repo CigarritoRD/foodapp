@@ -1,4 +1,4 @@
-import { useCarrito } from "../../../hooks/useCarrito";
+import { useCarrito } from "../../../hooks/useCart";
 const ProductoAgregarAlCarrito = ({ item, children }) => {
   const { addItemToCart } = useCarrito();
   return (

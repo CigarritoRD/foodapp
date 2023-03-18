@@ -1,11 +1,11 @@
-import { RiShoppingBasketLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { RiShoppingBasketLine } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 
-import { useCarrito } from "../../hooks/useCarrito";
-import { motion } from "framer-motion";
+import { useCart } from '../../hooks/useCart'
+import { motion } from 'framer-motion'
 
 const Card = ({ data, image, item }) => {
-  const { addItemToCart } = useCarrito();
+  const { addItemToCart } = useCart()
 
   return (
     <motion.div
@@ -30,14 +30,14 @@ const Card = ({ data, image, item }) => {
       <RiShoppingBasketLine
         onClick={() => addItemToCart(item)}
         size={20}
-        color={"white"}
+        color={'white'}
         className={
-          "absolute bottom-3 right-3 rounded-full h-8 w-8 bg-yellow-400 p-1 hover:shadow-md duration-100 hover:scale-110 hover:cursor-pointer"
+          'absolute bottom-3 right-3 rounded-full h-8 w-8 bg-yellow-400 p-1 hover:shadow-md duration-100 hover:scale-110 hover:cursor-pointer'
         }
       />
       {/* BASKET ICON */}
     </motion.div>
-  );
-};
+  )
+}
 
-export default Card;
+export default Card

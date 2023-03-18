@@ -1,8 +1,8 @@
-import React from "react";
-import { HeroPages } from "../../components";
+import React from 'react'
+import { HeroPages } from '../../components'
 
 const Cart = () => {
-  return <HeroPages />;
-};
+  return <HeroPages />
+}
 
-export default Cart;
+export default Cart

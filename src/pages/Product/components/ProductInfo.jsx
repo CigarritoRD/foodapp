@@ -1,5 +1,5 @@
 import React from "react";
-import { useCarrito } from "../../../hooks/useCarrito";
+import { useCarrito } from "../../../hooks/useCart";
 
 const ProductInfo = ({ children }) => {
   const { addItemToCart } = useCarrito();

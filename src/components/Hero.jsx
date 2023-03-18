@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
-import hamberger from "../assets/hamberguer.png";
-import background from "../assets/HeroBackground.jpg";
+import React from 'react'
+import { motion } from 'framer-motion'
+import hamberger from '../assets/hamberguer.png'
+import background from '../assets/HeroBackground.jpg'
 const Hero = () => {
   return (
     <div className=' mt-20 bg-black/90 relative md:h-[600px]'>
@@ -32,7 +32,7 @@ const Hero = () => {
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1.25, opacity: 1 }}
-          transition={{ duration: 1, type: "spring" }}
+          transition={{ duration: 1, type: 'spring' }}
           className='flex relative items-center justify-center p-4 md:p-0 rounded-2xl overflow-hidden scale-125 '
         >
           <motion.img
@@ -41,17 +41,16 @@ const Hero = () => {
               delay: 1,
               duration: 10,
               repeat: Infinity,
-              repeatType: "reverse",
+              repeatType: 'reverse'
             }}
             className='w-full h-full object-cover drop-shadow-[0_35px_35px_rgba(0,0,0,0.80)]'
-            // src='https://es.rc-cdn.community.thermomix.com/recipeimage/s3x1gsfi-3d839-205138-cfcd2-3qsm0j1y/148f620b-8050-4bd2-9dd6-aca7af1154e2/main/hamburguesa-de-ternera.jpg'
             src={hamberger}
             alt=''
           />
         </motion.div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

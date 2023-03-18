@@ -1,29 +1,28 @@
-import Card from "./ProductCard/Card";
-import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri";
-import { useContext } from "react";
-import { menuContext } from "../context/menuContext";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
+import { RiArrowDropLeftLine, RiArrowDropRightLine } from 'react-icons/ri'
+import Card from './ProductCard/Card'
 
-import { ProductCardImage, ProductCardInfo, ProductStarsFiller } from "./ProductCard";
-import { CategoriaInfo, CategoriaTitulo, CategoriaBotones, CategoriaBoton } from "./index";
-import { useRef } from "react";
+import { useProductsContext } from '../hooks/useProductsContext'
+import { CategoriaBoton, CategoriaBotones, CategoriaInfo, CategoriaTitulo } from './index'
+import { ProductCardImage, ProductCardInfo, ProductStarsFiller } from './ProductCard'
 
 const CarruselCards = ({ filtro, pre, titulo }) => {
-  const { datos } = useContext(menuContext);
+  const { products } = useProductsContext()
 
-  const ref = useRef(null);
+  const ref = useRef(null)
 
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true })
 
-  const comidasFiltradas = filtro ? datos.filter((comida) => comida.categoria === filtro) : datos;
+  const comidasFiltradas = filtro ? products.filter((comida) => comida.categoria === filtro) : products
 
   return (
     <motion.div
       ref={ref}
-      style={{ overflow: "hidden" }}
-      initial={{ opacity: 0, y: "50%" }}
-      animate={{ opacity: isInView ? 1 : 0, y: isInView && "0%" }}
-      transition={{ duration: 0.5, type: "spring", bounce: 0.3 }}
+      style={{ overflow: 'hidden' }}
+      initial={{ opacity: 0, y: '50%' }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView && '0%' }}
+      transition={{ duration: 0.5, type: 'spring', bounce: 0.3 }}
       className='max-w-[1200px] mx-auto bg-slate-50'
     >
       <CategoriaInfo>
@@ -50,11 +49,11 @@ const CarruselCards = ({ filtro, pre, titulo }) => {
               }
               item={comida}
             />
-          );
+          )
         })}
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
-export default CarruselCards;
+export default CarruselCards

@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 const CrearCuenta = () => {
-  return <div>CrearCuenta</div>;
-};
+  return <div>CrearCuenta</div>
+}
 
-export default CrearCuenta;
+export default CrearCuenta

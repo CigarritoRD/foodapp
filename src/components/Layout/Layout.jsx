@@ -1,8 +1,8 @@
-import React from "react";
-import Routers from "../../routes/Routers";
-import { FooterInfo } from "../Footer";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
+import React from 'react'
+import Routers from '../../routes/Routers'
+import { FooterInfo } from '../Footer'
+import Footer from '../Footer/Footer'
+import Header from '../Header/Header'
 
 const Layout = () => {
   return (
@@ -15,7 +15,7 @@ const Layout = () => {
         <FooterInfo />
       </Footer>
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

@@ -1,9 +1,9 @@
-import React from "react";
-import aboutUsImage from "../../assets/menu/Screenshot_1.jpg";
-import aboutUsImage2 from "../../assets/menu/Screenshot_2.jpg";
-import aboutUsImage3 from "../../assets/menu/Screenshot_3.jpg";
-import { MdFastfood, MdOutlineDeliveryDining, MdRestaurantMenu } from "react-icons/md";
-import { FaPizzaSlice } from "react-icons/fa";
+import React from 'react'
+import aboutUsImage from '../../assets/menu/Screenshot_1.jpg'
+import aboutUsImage2 from '../../assets/menu/Screenshot_2.jpg'
+import aboutUsImage3 from '../../assets/menu/Screenshot_3.jpg'
+import { MdFastfood, MdOutlineDeliveryDining, MdRestaurantMenu } from 'react-icons/md'
+import { FaPizzaSlice } from 'react-icons/fa'
 
 const AboutUs = () => {
   return (
@@ -40,25 +40,25 @@ const AboutUs = () => {
 
         <div className=' absolute z-40 w-full bg-transparent grid grid-cols-2 md:grid-cols-4 place-items-center gap-4 h-full py-12 max-w-[1200px] mx-auto min-h-[350px]  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
           <div className='flex gap-2 items-center justify-center flex-col p-2 '>
-            <MdOutlineDeliveryDining size={80} color={"gold"} />
+            <MdOutlineDeliveryDining size={80} color={'gold'} />
             <p className='text-xl font-bold text-white'>Fast Delivery</p>
           </div>
           <div className='flex gap-2 items-center justify-center flex-col p-2'>
-            <MdFastfood size={80} color={"gold"} />
+            <MdFastfood size={80} color={'gold'} />
             <p className='text-xl font-bold text-white'>Fast Delivery</p>
           </div>
           <div className='flex gap-2 items-center justify-center flex-col p-2'>
-            <MdRestaurantMenu size={80} color={"gold"} />
+            <MdRestaurantMenu size={80} color={'gold'} />
             <p className='text-xl font-bold text-white'>Fast Delivery</p>
           </div>
           <div className='flex gap-2 items-center justify-center flex-col p-2'>
-            <FaPizzaSlice size={80} color={"gold"} />
+            <FaPizzaSlice size={80} color={'gold'} />
             <p className='text-xl font-bold text-white'>Fast Delivery</p>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default AboutUs;
+export default AboutUs

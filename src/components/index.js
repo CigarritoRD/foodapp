@@ -6,7 +6,7 @@ export { default as CategoriaInfo } from "./CategoriaInfo";
 export { default as CategoriaTitulo } from "./CategoriaTitulo";
 export { default as CategoriasCarrusel } from "./CategoriasCarrusel";
 export * from "./Footer";
-export * from "./Header/CarritoModal";
+export * from "./Header/CartModal";
 export * from "./Header/Menu";
 export * from "./Header/Navbar";
 export * from "./Header";
