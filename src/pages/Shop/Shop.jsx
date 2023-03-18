@@ -14,7 +14,7 @@ import useSearch from '../../hooks/useSearch'
 import { useSearchParams } from 'react-router-dom'
 
 const Shop = () => {
-  const { datos } = useProductsContext()
+  const { products } = useProductsContext()
   const [URLSearchParams] = useSearchParams()
   const param = URLSearchParams.get('searchbar')
   const categoria = URLSearchParams.get('categoria')
@@ -27,7 +27,7 @@ const Shop = () => {
     setTerm(value)
   }
 
-  const platosFiltrados = filteredItems(datos, term, categoria)
+  const platosFiltrados = filteredItems(products, term, categoria)
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const CardProduct = ({ product }) => {
   return (
@@ -10,7 +10,7 @@ const CardProduct = ({ product }) => {
         <img
           className='w-full -rotate-12 h-full rounded-xl mt-10 object-cover'
           src={product.imagen}
-          alt=''
+          alt='' loading="lazy"
         />
       </div>
       <div className='flex-1'></div>
@@ -21,7 +21,7 @@ const CardProduct = ({ product }) => {
         <div className='flex items-center justify-between'></div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CardProduct;
+export default CardProduct
