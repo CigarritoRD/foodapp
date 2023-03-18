@@ -3,7 +3,7 @@ import Layout from './components/Layout/Layout'
 import CartContextProvider from './context/cartContext'
 import 'react-toastify/dist/ReactToastify.css'
 
-function App() {
+const App = () => {
   return (
     <CartContextProvider>
       <Layout />
