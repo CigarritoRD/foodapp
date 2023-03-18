@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { ProductsContext } from '../context/productsContext'
 
 export const useProductsContext = () => {
-  const { products, loading } = useContext(ProductsContext)
+  const { products } = useContext(ProductsContext)
 
-  return { products, loading }
+  return { products }
 }

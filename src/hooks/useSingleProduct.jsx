@@ -5,12 +5,12 @@ export const useSingleProduct = (nombre) => {
   const { products } = useProductsContext()
   const [singleProduct, setSingleProduct] = useState([])
 
-  const getOneProduct = (products, nombre) => {
-    return products.filter((item) => item.nombre === nombre)
-  }
   useEffect(() => {
-    setSingleProduct(getOneProduct(products, nombre))
-  }, [nombre])
+    console.log({ products, nombre })
+    if (!products && !nombre) return
+    const product = products.filter((item) => item.nombre === nombre)
+    setSingleProduct(product)
+  }, [products, nombre])
 
   return { singleProduct }
 }

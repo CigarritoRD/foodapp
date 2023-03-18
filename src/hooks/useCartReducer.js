@@ -5,6 +5,7 @@ import { ACTION_REDUCER_TYPE, cartReducer, initialCartState } from '../reducers/
 
 export const useCartReducer = () => {
   const [state, dispatch] = useReducer(cartReducer, initialCartState)
+
   const addItemToCart = (product) => {
     dispatch({
       type: ACTION_REDUCER_TYPE.ADD_ITEM_TO_CART,

@@ -5,6 +5,7 @@ import { Producto } from './components'
 const Product = () => {
   const { nombre } = useParams()
   const { singleProduct } = useSingleProduct(nombre)
+  console.log(singleProduct)
 
   return (
     <div className='min-h-[600px] grid place-content-center bg-white'>

@@ -1,15 +1,10 @@
-import { createContext, useEffect, useState } from 'react'
-import { data } from '../Data/data'
+import { createContext } from 'react'
+import { useProducts } from '../hooks/useProducts'
 
 export const ProductsContext = createContext()
 
 const ProductsContextProvider = ({ children }) => {
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    setProducts(data.productos)
-  }, [data])
-
+  const { products } = useProducts()
   return <ProductsContext.Provider value={{ products }}>{children}</ProductsContext.Provider>
 }
 
