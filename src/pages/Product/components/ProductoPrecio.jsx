@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const ProductoPrecio = ({ precio }) => {
   return (
@@ -9,7 +9,7 @@ const ProductoPrecio = ({ precio }) => {
         <span className='md:text-4xl text-xl'>$</span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductoPrecio;
+export default ProductoPrecio

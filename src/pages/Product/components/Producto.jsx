@@ -1,11 +1,11 @@
-import React from "react";
-import CardProduct from "./Card";
-import ProductDescripcion from "./ProductDescripcion";
-import ProductInfo from "./ProductInfo";
-import ProductoAgregarAlCarrito from "./ProductoAgregarAlCarrito";
-import ProductoCantidad from "./ProductoCantidad";
-import ProductoPrecio from "./ProductoPrecio";
-import ProductTitle from "./ProductTitle";
+import React from 'react'
+import CardProduct from './Card'
+import ProductDescripcion from './ProductDescripcion'
+import ProductInfo from './ProductInfo'
+import ProductoAgregarAlCarrito from './ProductoAgregarAlCarrito'
+import ProductoCantidad from './ProductoCantidad'
+import ProductoPrecio from './ProductoPrecio'
+import ProductTitle from './ProductTitle'
 
 const Producto = ({ item }) => {
   return (
@@ -26,7 +26,7 @@ const Producto = ({ item }) => {
         <p className='text-md bg-gray-50 font-bold p-4'>Descuento: -4.00$</p>
       </ProductInfo>
     </div>
-  );
-};
+  )
+}
 
-export default Producto;
+export default Producto

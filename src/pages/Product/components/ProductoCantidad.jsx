@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const ProductoCantidad = () => {
   return (
@@ -9,7 +9,7 @@ const ProductoCantidad = () => {
         <button>-</button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ProductoCantidad;
+export default ProductoCantidad
